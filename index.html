@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%230A1A2F%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22Georgia%22>CS</text></svg>">
+<meta property="og:title" content="Dr. Cid Scarpa · Urologista em Porto Velho">
+<meta property="og:description" content="Consultas, exames e cirurgias urológicas no Urocentro. CRM-RO 1047 · RQE 82.">
+<meta property="og:image" content="assets/dr-cid.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<title>Dr. Cid Scarpa</title>
+<meta name="description" content="Dr. Cid Scarpa, médico urologista em Porto Velho. CRM-RO 1047 · RQE 82. Urocentro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ink:#0A1A2F;        /* azul-noite: textos e blocos escuros */
+  --deep:#10294A;       /* azul-marinho Urocentro */
+  --azul:#1F6FE0;       /* azul de marca, único acento */
+  --azul-claro:#8DB8F2;
+  --tint:#E3ECF8;       /* gelo azulado */
+  --paper:#F5F8FC;      /* fundo */
+  --line:#CBD7E6;
+  --muted:#56657A;      /* neutro puxado ao azul */
+  --brass:#B38B52;      /* detalhe do lenço de bolso: credenciais */
+  --white:#FFFFFF;
+  --serif:"Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --sans:"Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+  --wrap:1180px;
+  --gutter:clamp(16px,4vw,40px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;margin:0;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--azul);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h2{font-size:clamp(40px,5.6vw,68px)}
+h2 em,h1 em{font-style:italic;color:var(--azul)}
+p{margin:0}
+.lead{font-size:clamp(18px,1.6vw,20px);color:var(--muted);max-width:56ch}
+
+/* ---------- botões ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 16px/1 var(--sans);padding:16px 22px;border-radius:999px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s,background .2s,color .2s,border-color .2s}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--azul);color:var(--white)}
+.btn-primary:hover{background:#1559BD;transform:translateY(-1px)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-light{background:var(--white);color:var(--ink)}
+.btn-light:hover{background:var(--tint)}
+
+/* ---------- navegação ---------- */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(245,248,252,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(203,215,230,.6)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-mark{width:38px;height:38px;border-radius:50%;background:var(--ink);display:grid;place-items:center}
+.brand-mark svg{width:24px;height:24px}
+.brand b{font-family:var(--serif);font-weight:400;font-size:22px;display:block;line-height:1}
+.brand small{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.nav-links{display:flex;gap:28px;font-size:15px;font-weight:500}
+.nav-links a{text-decoration:none;color:var(--muted)}
+.nav-links a:hover{color:var(--ink)}
+.nav .btn{padding:12px 18px;font-size:15px}
+@media (max-width:860px){.nav-links{display:none}}
+@media (max-width:480px){.nav .btn span{display:none}.nav .btn{padding:12px}}
+
+/* ---------- hero ---------- */
+.hero{overflow-x:clip;padding-block:clamp(40px,7vw,88px) clamp(48px,7vw,96px)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(52px,8vw,112px);margin-block:18px 26px}
+.hero h1 .name{display:block}
+.hero .lead{margin-bottom:34px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+.hero-facts div{font-size:14px;color:var(--muted)}
+.hero-facts strong{display:block;color:var(--ink);font-size:15px;font-weight:600}
+.portrait{position:relative;justify-self:end;width:100%;max-width:440px}
+.portrait-frame{aspect-ratio:4/5;border-radius:220px 220px 20px 20px;overflow:hidden;background:var(--tint);max-width:100%}
+.portrait-frame img{width:100%;height:100%;object-fit:cover;object-position:52% 30%;transform:scale(1.18);transform-origin:52% 40%}
+.portrait-ring{position:absolute;inset:-14px -14px auto -14px;aspect-ratio:1;border:1px solid var(--line);border-radius:50%;pointer-events:none;z-index:-1}
+.credential{position:absolute;left:-28px;bottom:28px;background:var(--ink);color:var(--white);border-radius:14px;padding:16px 20px;box-shadow:0 18px 40px -18px rgba(10,26,47,.55);min-width:220px}
+.credential .eyebrow{color:var(--azul-claro);font-size:10.5px}
+.credential p{font-family:var(--serif);font-size:24px;line-height:1.1;margin-block:4px 10px}
+.credential dl{display:flex;gap:18px;margin:0;font-family:var(--mono);font-size:12px}
+.credential dt{color:var(--brass);letter-spacing:.1em}
+.credential dd{margin:0}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr}
+  .portrait{justify-self:center;max-width:380px;order:-1}
+  .credential{left:auto;right:-6px;bottom:18px}
+}
+@media (max-width:480px){.credential{right:0;min-width:0;padding:12px 16px}.credential p{font-size:20px}}
+
+/* ---------- faixa de credenciais ---------- */
+.strip{background:var(--ink);color:var(--white);overflow:hidden}
+.strip-track{display:flex;gap:48px;padding-block:18px;white-space:nowrap;width:max-content;animation:marquee 38s linear infinite}
+.strip-track span{font-family:var(--serif);font-size:26px;display:inline-flex;align-items:center;gap:48px}
+.strip-track span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--azul)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.strip-track{animation:none}}
+
+section.block{padding-block:clamp(72px,10vw,128px)}
+.section-head{display:grid;grid-template-columns:1fr 1fr;gap:24px 48px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.section-head .eyebrow{grid-column:1/-1}
+@media (max-width:860px){.section-head{grid-template-columns:1fr}}
+
+/* ---------- mapa anatômico ---------- */
+.atlas{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:stretch}
+.atlas-figure{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:16px}
+.atlas-figure svg{width:100%;height:auto;max-height:560px}
+.atlas-hint{font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.atlas-hint svg{width:14px;height:14px}
+.organ path,.organ ellipse,.organ line{transition:fill .25s,stroke .25s}
+.organ .shape{fill:var(--tint);stroke:var(--ink);stroke-width:1.6}
+.organ .hit{fill:transparent;cursor:pointer}
+.organ .dot{fill:var(--azul)}
+.organ .pulse{fill:none;stroke:var(--azul);stroke-width:1.2;transform-box:fill-box;transform-origin:center;animation:pulse 2.4s ease-out infinite}
+.organ text{font-family:var(--mono);font-size:11px;letter-spacing:.08em;fill:var(--muted);text-transform:uppercase;pointer-events:none}
+.organ:hover .shape,.organ:focus-visible .shape{fill:#C9DBF4}
+.organ.is-active .shape{fill:var(--azul);stroke:var(--deep)}
+.organ.is-active .dot{fill:var(--white)}.organ.is-active .pulse{stroke:var(--white)}
+.organ.is-active text{fill:var(--ink);font-weight:500}
+.organ:focus{outline:none}
+.duct{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round}
+@keyframes pulse{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.2);opacity:0}}
+@media (prefers-reduced-motion:reduce){.organ .pulse{animation:none;opacity:0}}
+
+.atlas-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.tab{font:500 14px/1 var(--sans);padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+.tab:hover{color:var(--ink);border-color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--white)}
+.atlas-panel{background:var(--deep);color:var(--white);border-radius:24px;padding:clamp(24px,4vw,44px);display:flex;flex-direction:column;gap:24px;min-height:100%}
+.atlas-panel .eyebrow{color:var(--azul-claro)}
+.atlas-panel h3{font-size:clamp(36px,4vw,52px)}
+.atlas-panel .desc{color:#C4D3E8;max-width:52ch}
+.panel-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;border-top:1px solid rgba(255,255,255,.14);padding-top:24px}
+.panel-cols h4{font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 12px}
+.panel-cols ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.panel-cols li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px;line-height:1.4}
+.panel-cols li::before{content:"";flex:none;width:6px;height:6px;margin-top:8px;border-radius:50%;background:var(--azul-claro)}
+.panel-cta{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.panel-cta small{color:#9FB4D0;font-size:13px}
+@media (max-width:860px){.atlas{grid-template-columns:1fr}.atlas-figure svg{max-height:420px}}
+@media (max-width:520px){.panel-cols{grid-template-columns:1fr}}
+
+/* ---------- ThuLEP ---------- */
+.feature{background:var(--ink);color:var(--white);border-radius:32px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+.feature-copy{padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;gap:22px}
+.feature-copy .eyebrow{color:var(--azul-claro)}
+.feature-copy h2 em{color:var(--azul-claro)}
+.feature-copy p{color:#C4D3E8;max-width:48ch}
+.feature-list{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:0;border-top:1px solid rgba(255,255,255,.14)}
+.feature-list li{display:grid;grid-template-columns:130px 1fr;gap:16px;padding-block:14px;border-bottom:1px solid rgba(255,255,255,.14);font-size:15.5px}
+.feature-list dt,.feature-list b{font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);padding-top:3px}
+.feature-art{position:relative;min-height:380px;background:radial-gradient(circle at 50% 50%,#17406F 0%,var(--ink) 70%)}
+.feature-art canvas{position:absolute;inset:0;width:100%;height:100%}
+.feature-art .word{position:absolute;left:0;right:0;bottom:24px;text-align:center;font-family:var(--serif);font-size:clamp(64px,10vw,132px);line-height:1;color:rgba(255,255,255,.08);pointer-events:none}
+@media (max-width:860px){.feature{grid-template-columns:1fr}.feature-art{min-height:280px;order:-1}}
+@media (max-width:480px){.feature-list li{grid-template-columns:1fr;gap:4px}}
+
+/* ---------- mitos ---------- */
+.myths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.myth{border:1px solid var(--line);border-radius:20px;background:var(--white);padding:28px;display:flex;flex-direction:column;gap:14px;text-align:left;font:inherit;color:inherit;cursor:pointer;transition:border-color .2s,background .2s}
+.myth:hover{border-color:var(--ink)}
+.myth .tag{align-self:flex-start;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--tint);color:var(--deep)}
+.myth q{font-family:var(--serif);font-size:clamp(26px,2.6vw,32px);line-height:1.12;quotes:"“" "”"}
+.myth .answer{color:var(--muted);font-size:16px;display:none}
+.myth .reveal{font:600 14px/1 var(--sans);color:var(--azul);display:inline-flex;align-items:center;gap:6px;margin-top:auto}
+.myth .reveal svg{width:16px;height:16px;transition:transform .2s}
+.myth[aria-expanded="true"]{background:var(--tint);border-color:var(--tint)}
+.myth[aria-expanded="true"] .tag{background:var(--ink);color:var(--white)}
+.myth[aria-expanded="true"] .answer{display:block}
+.myth[aria-expanded="true"] .reveal svg{transform:rotate(180deg)}
+@media (max-width:720px){.myths{grid-template-columns:1fr}}
+
+/* ---------- consulta ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--ink)}
+.step{padding:24px 24px 8px 0;display:flex;flex-direction:column;gap:10px}
+.step + .step{padding-left:24px;border-left:1px solid var(--line)}
+.step .n{font-family:var(--serif);font-size:56px;line-height:1;color:var(--azul)}
+.step h3{font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.3}
+.step p{color:var(--muted);font-size:15.5px}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}.step:nth-child(3){padding-left:0;border-left:0}.step:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}.step,.step + .step{padding-left:0;border-left:0}.step + .step{border-top:1px solid var(--line)}}
+
+/* ---------- agendar ---------- */
+.book{background:var(--deep);color:var(--white)}
+.book .section-head .eyebrow{color:var(--azul-claro)}
+.book h2 em{color:var(--azul-claro)}
+.book .lead{color:#C4D3E8}
+.book-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,56px);align-items:start}
+.composer{display:flex;flex-direction:column;gap:22px}
+.field-label{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--azul-claro);margin-bottom:10px;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:8px;border:0;padding:0;margin:0}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-block;padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.24);font-size:15px;cursor:pointer;transition:all .2s;user-select:none}
+.chip span:hover{border-color:var(--white)}
+.chip input:checked + span{background:var(--white);color:var(--ink);border-color:var(--white)}
+.chip input:focus-visible + span{outline:2px solid var(--azul-claro);outline-offset:2px}
+.text-input{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.24);border-radius:12px;padding:14px 16px;font:16px var(--sans);color:var(--white)}
+.text-input::placeholder{color:#8EA3C0}
+.text-input:focus{outline:2px solid var(--azul-claro);outline-offset:1px;border-color:transparent}
+.phone{background:#0B1E36;border:1px solid rgba(255,255,255,.1);border-radius:28px;padding:18px;display:flex;flex-direction:column;gap:14px}
+.phone-top{display:flex;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.1)}
+.phone-top img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:52% 25%}
+.phone-top b{display:block;font-size:15px}
+.phone-top small{color:#8EA3C0;font-size:12px}
+.bubble{align-self:flex-end;max-width:92%;background:#1B5FC4;border-radius:16px 16px 4px 16px;padding:12px 14px;font-size:15px;line-height:1.45;white-space:pre-line;min-height:48px}
+.bubble time{display:block;text-align:right;font-size:11px;color:#BFD4F3;margin-top:4px}
+.phone .btn{justify-content:center}
+.privacy{font-size:12.5px;color:#8EA3C0}
+.place{margin-top:28px;display:grid;gap:16px;border-top:1px solid rgba(255,255,255,.14);padding-top:24px}
+.place-row{display:flex;gap:14px;align-items:flex-start}
+.place-row svg{flex:none;width:20px;height:20px;color:var(--azul-claro);margin-top:3px}
+.place-row a{color:var(--white)}
+.place-row small{display:block;color:#9FB4D0}
+@media (max-width:860px){.book-grid{grid-template-columns:1fr}}
+
+/* ---------- rodapé ---------- */
+footer{background:var(--ink);color:#9FB4D0;padding-block:48px calc(48px + env(safe-area-inset-bottom,0px));font-size:14px}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+footer b{color:var(--white);font-family:var(--serif);font-weight:400;font-size:26px;display:block;line-height:1.1;margin-bottom:8px}
+footer h4{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 10px}
+footer a{color:var(--white)}
+footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-size:12.5px;line-height:1.6}
+@media (max-width:720px){footer .wrap{grid-template-columns:1fr}}
+
+/* barra fixa mobile */
+.mobile-cta{display:none}
+@media (max-width:720px){
+  .mobile-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(10,26,47,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .mobile-cta .btn{flex:1;justify-content:center}
+  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+}
+</style>
+</head>
+<body>
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Dr. Cid Scarpa, início">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.3" stroke-linecap="round"><path d="M8.2 4.5c-2.6 0-4 2.3-4 5.2s1.5 5.3 3.8 5.3c1.5 0 2-1.2 1.5-2.4-.4-1-.4-1.9.2-2.8.7-1 .5-2.4-.2-3.6-.3-.9-.6-1.7-1.3-1.7Z"/><path d="M15.8 4.5c2.6 0 4 2.3 4 5.2s-1.5 5.3-3.8 5.3c-1.5 0-2-1.2-1.5-2.4.4-1 .4-1.9-.2-2.8-.7-1-.5-2.4.2-3.6.3-.9.6-1.7 1.3-1.7Z"/><path d="M9.5 11c1 2 1.8 4 2.5 8.5M14.5 11c-1 2-1.8 4-2.5 8.5"/></svg>
+      </span>
+      <span><b>Dr. Cid Scarpa</b><small>Urologista · Urocentro</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Seções">
+      <a href="#atuacao">Áreas de atuação</a>
+      <a href="#thulep">ThuLEP</a>
+      <a href="#mitos">Mitos</a>
+      <a href="#consulta">A consulta</a>
+    </nav>
+    <a class="btn btn-primary" href="#agendar"><i data-lucide="calendar-check"></i><span>Agendar consulta</span></a>
+  </div>
+</header>
+
+<main id="inicio">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow reveal-up">Médico urologista · Porto Velho, RO</p>
+      <h1 class="reveal-up"><span class="name">Dr. Cid</span><em>Scarpa</em></h1>
+      <p class="lead reveal-up">Urologia clínica e cirúrgica para homens e mulheres, com uma conversa franca sobre o que você sente e o que pode ser feito. Consultas, exames e cirurgias no Urocentro, no Centro de Porto Velho.</p>
+      <div class="hero-actions reveal-up">
+        <a class="btn btn-primary" href="#agendar"><i data-lucide="message-circle"></i>Agendar pelo WhatsApp</a>
+        <a class="btn btn-ghost" href="#atuacao">O que eu trato<i data-lucide="arrow-down"></i></a>
+      </div>
+      <div class="hero-facts reveal-up">
+        <div><strong>Consultas</strong>avaliação e acompanhamento</div>
+        <div><strong>Exames</strong>incluindo cistoscopia</div>
+        <div><strong>Cirurgias</strong>endoscópicas, a laser e abertas</div>
+      </div>
+    </div>
+    <figure class="portrait reveal-photo" style="margin:0">
+      <span class="portrait-ring" aria-hidden="true"></span>
+      <div class="portrait-frame">
+        <img src="assets/dr-cid.jpg" alt="Dr. Cid Scarpa sentado à mesa do consultório, de terno escuro, sorrindo">
+      </div>
+      <figcaption class="credential">
+        <span class="eyebrow">Registro profissional</span>
+        <p>Dr. Cid Scarpa</p>
+        <dl><div><dt>CRM-RO</dt><dd>1047</dd></div><div><dt>RQE</dt><dd>82</dd></div></dl>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true">
+  <div class="strip-track">
+    <span>Cálculo renal</span><span>Próstata</span><span>Câncer de bexiga</span><span>Incontinência urinária</span><span>Disfunção erétil</span><span>Infertilidade masculina</span><span>Varicocele</span><span>Fimose</span>
+    <span>Cálculo renal</span><span>Próstata</span><span>Câncer de bexiga</span><span>Incontinência urinária</span><span>Disfunção erétil</span><span>Infertilidade masculina</span><span>Varicocele</span><span>Fimose</span>
+  </div>
+</div>
+
+<!-- ATLAS -->
+<section class="block" id="atuacao">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Áreas de atuação</p>
+      <h2>Do rim à uretra, <em>um só cuidado.</em></h2>
+      <p class="lead">A urologia cuida do sistema urinário de homens e mulheres e do sistema reprodutor masculino. Toque em uma região para ver as doenças e os tratamentos.</p>
+    </div>
+
+    <div class="atlas">
+      <div class="atlas-figure">
+        <svg viewBox="0 0 320 540" role="group" aria-label="Mapa do sistema urinário e reprodutor masculino">
+          <!-- ductos -->
+          <path class="duct draw" d="M112 150 C 118 200, 132 250, 140 300"/>
+          <path class="duct draw" d="M208 150 C 202 200, 188 250, 180 300"/>
+          <line class="duct draw" x1="160" y1="396" x2="160" y2="468"/>
+
+          <g class="organ" data-organ="rins" tabindex="0" role="button" aria-label="Rins">
+            <path class="shape draw" d="M92 62c-26 0-40 26-40 58s14 60 38 60c16 0 22-12 17-26-4-11-4-21 2-30 7-11 6-26-2-38-4-10-7-24-15-24Z"/>
+            <path class="shape draw" d="M228 62c26 0 40 26 40 58s-14 60-38 60c-16 0-22-12-17-26 4-11 4-21-2-30-7-11-6-26 2-38 4-10 7-24 15-24Z"/>
+            <circle class="pulse" cx="80" cy="120" r="7"/><circle class="dot" cx="80" cy="120" r="4"/>
+            <text x="160" y="40" text-anchor="middle">Rins</text>
+            <rect class="hit" x="40" y="50" width="240" height="140"/>
+          </g>
+
+          <g class="organ" data-organ="bexiga" tabindex="0" role="button" aria-label="Bexiga">
+            <path class="shape draw" d="M160 290c-38 0-62 20-62 46 0 26 26 44 62 44s62-18 62-44c0-26-24-46-62-46Z"/>
+            <circle class="pulse" cx="160" cy="334" r="7"/><circle class="dot" cx="160" cy="334" r="4"/>
+            <text x="238" y="338">Bexiga</text>
+            <rect class="hit" x="94" y="286" width="190" height="96"/>
+          </g>
+
+          <g class="organ" data-organ="prostata" tabindex="0" role="button" aria-label="Próstata">
+            <ellipse class="shape draw" cx="160" cy="398" rx="26" ry="17"/>
+            <circle class="pulse" cx="160" cy="398" r="6"/><circle class="dot" cx="160" cy="398" r="3.5"/>
+            <text x="238" y="402">Próstata</text>
+            <rect class="hit" x="130" y="382" width="160" height="32"/>
+          </g>
+
+          <g class="organ" data-organ="penis" tabindex="0" role="button" aria-label="Pênis">
+            <rect class="shape draw" x="151" y="424" width="18" height="70" rx="9"/>
+            <circle class="pulse" cx="160" cy="470" r="6"/><circle class="dot" cx="160" cy="470" r="3.5"/>
+            <text x="238" y="474">Pênis</text>
+            <rect class="hit" x="146" y="418" width="144" height="80"/>
+          </g>
+
+          <g class="organ" data-organ="testiculos" tabindex="0" role="button" aria-label="Testículos">
+            <ellipse class="shape draw" cx="124" cy="470" rx="16" ry="21"/>
+            <ellipse class="shape draw" cx="196" cy="470" rx="16" ry="21"/>
+            <circle class="pulse" cx="124" cy="470" r="6"/><circle class="dot" cx="124" cy="470" r="3.5"/>
+            <text x="82" y="520" text-anchor="middle">Testículos</text>
+            <rect class="hit" x="36" y="444" width="106" height="84"/>
+          </g>
+        </svg>
+        <p class="atlas-hint"><i data-lucide="pointer"></i>Esquema ilustrativo, fora de escala</p>
+      </div>
+
+      <div>
+        <div class="atlas-tabs" role="tablist" aria-label="Regiões">
+          <button class="tab" role="tab" id="tab-rins" data-organ="rins" aria-selected="true">Rins</button>
+          <button class="tab" role="tab" id="tab-bexiga" data-organ="bexiga" aria-selected="false">Bexiga</button>
+          <button class="tab" role="tab" id="tab-prostata" data-organ="prostata" aria-selected="false">Próstata</button>
+          <button class="tab" role="tab" id="tab-penis" data-organ="penis" aria-selected="false">Pênis</button>
+          <button class="tab" role="tab" id="tab-testiculos" data-organ="testiculos" aria-selected="false">Testículos</button>
+        </div>
+        <article class="atlas-panel" id="panel" role="tabpanel" aria-live="polite">
+          <p class="eyebrow" id="p-eyebrow"></p>
+          <h3 id="p-title"></h3>
+          <p class="desc" id="p-desc"></p>
+          <div class="panel-cols">
+            <div><h4>Quando procurar</h4><ul id="p-signs"></ul></div>
+            <div><h4>O que tratamos</h4><ul id="p-treat"></ul></div>
+          </div>
+          <div class="panel-cta">
+            <a class="btn btn-light" id="p-cta" href="#agendar"><i data-lucide="message-circle"></i>Falar sobre isso</a>
+            <small>Resposta pela equipe do Urocentro</small>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THULEP -->
+<section class="block" id="thulep" style="padding-top:0">
+  <div class="wrap">
+    <div class="feature">
+      <div class="feature-copy">
+        <p class="eyebrow">Próstata aumentada · HPB</p>
+        <h2>ThuLEP: <em>laser</em> onde antes havia corte.</h2>
+        <p>A ThuLEP (enucleação da próstata com laser de túlio) é uma cirurgia endoscópica para o crescimento benigno da próstata. O acesso é feito pela uretra, sem incisões na pele, e o tecido que obstrui a passagem da urina é removido com o laser.</p>
+        <ul class="feature-list">
+          <li><b>Para quem</b><span>Homens com jato fraco, urgência ou idas frequentes ao banheiro à noite por aumento da próstata.</span></li>
+          <li><b>Como</b><span>Por via endoscópica, com anestesia, em ambiente hospitalar.</span></li>
+          <li><b>Indicação</b><span>Definida em consulta, após exames. Nem todo caso precisa de cirurgia.</span></li>
+        </ul>
+        <div><a class="btn btn-primary" href="#agendar">Avaliar meu caso</a></div>
+      </div>
+      <div class="feature-art" aria-hidden="true">
+        <canvas id="laser"></canvas>
+        <span class="word">ThuLEP</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MITOS -->
+<section class="block" id="mitos" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Perguntas do consultório</p>
+      <h2>Mito ou verdade? <em>Toque e descubra.</em></h2>
+      <p class="lead">Frases que o Dr. Cid ouve toda semana e que atrasam o diagnóstico.</p>
+    </div>
+    <div class="myths">
+      <button class="myth" aria-expanded="false">
+        <span class="tag">Mito</span>
+        <q>Urologista é médico só de homem.</q>
+        <span class="answer">A urologia também atende mulheres: incontinência urinária, infecções de repetição e cálculos renais estão entre os motivos mais comuns de consulta. Saúde íntima vai além da ginecologia.</span>
+        <span class="reveal">Ver resposta<i data-lucide="chevron-down"></i></span>
+      </button>
+      <button class="myth" aria-expanded="false">
+        <span class="tag">Mito</span>
+        <q>Fimose é coisa só de criança.</q>
+        <span class="answer">Adultos também podem ter fimose, que pode causar dor, infecções e dificuldade de higiene. Há tratamento, e a postectomia (circuncisão) é indicada quando necessário.</span>
+        <span class="reveal">Ver resposta<i data-lucide="chevron-down"></i></span>
+      </button>
+      <button class="myth" aria-expanded="false">
+        <span class="tag">Mito</span>
+        <q>Se não sinto nada, minha próstata está bem.</q>
+        <span class="answer">No início, o câncer de próstata costuma não dar sintomas. Por isso a avaliação com o urologista é recomendada a partir dos 50 anos, ou dos 45 para quem tem histórico familiar ou é homem negro.</span>
+        <span class="reveal">Ver resposta<i data-lucide="chevron-down"></i></span>
+      </button>
+      <button class="myth" aria-expanded="false">
+        <span class="tag">Mito</span>
+        <q>Pedra no rim sempre exige cirurgia com corte.</q>
+        <span class="answer">Muitos cálculos são eliminados com tratamento clínico. Quando a cirurgia é necessária, há técnicas endoscópicas e percutâneas, como a nefrolitotripsia percutânea, feita por um pequeno acesso.</span>
+        <span class="reveal">Ver resposta<i data-lucide="chevron-down"></i></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTA -->
+<section class="block" id="consulta" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Primeira consulta</p>
+      <h2>Como funciona, <em>do contato ao plano.</em></h2>
+      <p class="lead">Sem pressa e sem constrangimento. Você entende cada etapa antes de decidir.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><h3>Contato</h3><p>Você escolhe o motivo e fala com a equipe pelo WhatsApp para marcar o horário.</p></div>
+      <div class="step"><span class="n">2</span><h3>Consulta</h3><p>Conversa detalhada sobre sintomas e histórico, e exame físico quando indicado.</p></div>
+      <div class="step"><span class="n">3</span><h3>Exames</h3><p>Pedido dos exames necessários, como laboratoriais, de imagem ou cistoscopia.</p></div>
+      <div class="step"><span class="n">4</span><h3>Plano</h3><p>Tratamento clínico, acompanhamento ou cirurgia, explicados com riscos e recuperação.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENDAR -->
+<section class="block book" id="agendar">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Agendamento</p>
+      <h2>Conte o motivo. <em>A mensagem sai pronta.</em></h2>
+      <p class="lead">Marque o que você quer tratar e toque em enviar. O WhatsApp abre com o texto preenchido, e você pode editar antes de mandar.</p>
+    </div>
+    <div class="book-grid">
+      <form class="composer" id="composer" onsubmit="return false">
+        <div>
+          <label class="field-label" for="nome">Seu nome</label>
+          <input class="text-input" id="nome" name="nome" type="text" autocomplete="given-name" placeholder="Ex.: Maria">
+        </div>
+        <fieldset class="chips-wrap" style="border:0;padding:0;margin:0">
+          <legend class="field-label">Motivo da consulta</legend>
+          <div class="chips" id="chips"></div>
+        </fieldset>
+        <div>
+          <span class="field-label">Tipo de atendimento</span>
+          <div class="chips" id="tipo">
+            <label class="chip"><input type="radio" name="tipo" id="tipo-part" value="particular" checked><span>Particular</span></label>
+            <label class="chip"><input type="radio" name="tipo" id="tipo-conv" value="convênio"><span>Convênio (confirmar)</span></label>
+          </div>
+        </div>
+        <div class="place">
+          <div class="place-row"><i data-lucide="map-pin"></i><div>Av. Afonso Pena, 50, 2º andar, sala 06<small>Centro, Porto Velho, RO · Urocentro</small><a href="https://www.google.com/maps/search/?api=1&query=Urocentro+Av.+Afonso+Pena+50+Centro+Porto+Velho" target="_blank" rel="noopener">Abrir no mapa</a></div></div>
+          <div class="place-row"><i data-lucide="phone"></i><div><a href="https://wa.me/5569981118059" target="_blank" rel="noopener">(69) 98111-8059</a><small>WhatsApp da equipe</small></div></div>
+        </div>
+      </form>
+
+      <div class="phone" aria-label="Prévia da mensagem">
+        <div class="phone-top">
+          <img src="assets/dr-cid.jpg" alt="">
+          <div><b>Urocentro · Dr. Cid Scarpa</b><small>WhatsApp · (69) 98111-8059</small></div>
+        </div>
+        <div class="bubble" id="bubble" aria-live="polite"></div>
+        <a class="btn btn-primary" id="send" href="https://wa.me/5569981118059" target="_blank" rel="noopener"><i data-lucide="send"></i>Enviar pelo WhatsApp</a>
+        <p class="privacy">Nada do que você marca aqui é salvo. Evite enviar dados de saúde sensíveis por mensagem; eles serão tratados na consulta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Dr. Cid Scarpa</b>Médico urologista<br>CRM-RO 1047 · RQE 82</div>
+    <div><h4>Onde atende</h4>Urocentro<br>Av. Afonso Pena, 50, 2º andar, sala 06<br>Centro, Porto Velho, RO</div>
+    <div><h4>Contato</h4><a href="https://wa.me/5569981118059" target="_blank" rel="noopener">WhatsApp (69) 98111-8059</a><br><a href="https://www.instagram.com/urocentro.pvh/" target="_blank" rel="noopener">Instagram @urocentro.pvh</a></div>
+    <p class="legal">Conteúdo informativo, que não substitui a consulta médica. Diagnóstico e indicação de tratamento dependem de avaliação individual. Responsável técnico: Dr. Cid Scarpa, CRM-RO 1047, RQE 82.</p>
+  </div>
+</footer>
+
+<div class="mobile-cta"><a class="btn btn-primary" href="#agendar"><i data-lucide="message-circle"></i>Agendar consulta</a></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.453.0/dist/umd/lucide.min.js"></script>
+<script>
+(function(){
+  const WA = "5569981118059";
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- dados do mapa ---------- */
+  const ORGANS = {
+    rins:{eyebrow:"Rins e ureteres",title:"Rins",
+      desc:"Filtram o sangue e produzem a urina. Cálculos e tumores renais podem ficar anos sem sintomas.",
+      signs:["Dor forte nas costas ou no flanco","Sangue na urina","Infecções urinárias de repetição"],
+      treat:["Cálculo renal (clínico e cirúrgico)","Nefrolitotripsia percutânea","Nefrectomia por câncer"],
+      motivo:"Cálculo renal / rins"},
+    bexiga:{eyebrow:"Bexiga",title:"Bexiga",
+      desc:"Armazena a urina. Alterações no controle e sangue na urina merecem investigação, em homens e mulheres.",
+      signs:["Perda involuntária de urina","Urgência para urinar","Sangue na urina"],
+      treat:["Incontinência urinária (inclusive por via vaginal)","Cistoscopia com biópsia","Câncer de bexiga"],
+      motivo:"Bexiga / incontinência"},
+    prostata:{eyebrow:"Próstata",title:"Próstata",
+      desc:"Glândula masculina que cresce com a idade. O aumento benigno dificulta a micção; o câncer, no início, costuma ser silencioso.",
+      signs:["Jato urinário fraco","Acordar à noite para urinar","A partir dos 50 anos (45 com fatores de risco)"],
+      treat:["Hiperplasia prostática: ThuLEP","Ressecção endoscópica da próstata","Câncer de próstata: prostatovesiculectomia"],
+      motivo:"Próstata"},
+    penis:{eyebrow:"Saúde sexual",title:"Pênis",
+      desc:"Questões de ereção, curvatura e prepúcio têm tratamento e são conversadas com discrição.",
+      signs:["Dificuldade de ereção","Curvatura que atrapalha a relação","Pele que não retrai (fimose)"],
+      treat:["Disfunção erétil","Prótese peniana","Corporoplastia (curvatura)","Postectomia (fimose)"],
+      motivo:"Saúde sexual / pênis"},
+    testiculos:{eyebrow:"Fertilidade e testículos",title:"Testículos",
+      desc:"Produzem espermatozoides e testosterona. Nódulos, inchaço e dificuldade para engravidar pedem avaliação.",
+      signs:["Nódulo ou endurecimento","Aumento de volume ou dor na bolsa","Dificuldade para ter filhos"],
+      treat:["Varicocele","Hidrocele","Câncer de testículo (orquiectomia)","Infertilidade masculina"],
+      motivo:"Testículos / fertilidade"}
+  };
+
+  const $ = s=>document.querySelector(s);
+  const organs = document.querySelectorAll(".organ");
+  const tabs = document.querySelectorAll(".tab");
+  const fill = (ul,items)=>{ul.innerHTML="";items.forEach(t=>{const li=document.createElement("li");li.textContent=t;ul.appendChild(li);});};
+
+  function select(key, animate){
+    const d = ORGANS[key];
+    organs.forEach(o=>o.classList.toggle("is-active",o.dataset.organ===key));
+    tabs.forEach(t=>{const on=t.dataset.organ===key;t.setAttribute("aria-selected",on);t.tabIndex=on?0:-1;});
+    $("#panel").setAttribute("aria-labelledby","tab-"+key);
+    const render=()=>{
+      $("#p-eyebrow").textContent=d.eyebrow;
+      $("#p-title").textContent=d.title;
+      $("#p-desc").textContent=d.desc;
+      fill($("#p-signs"),d.signs);
+      fill($("#p-treat"),d.treat);
+    };
+    if(animate && window.gsap && !reduce){
+      gsap.to("#panel > *",{opacity:0,y:6,duration:.15,onComplete:()=>{render();gsap.to("#panel > *",{opacity:1,y:0,duration:.35,stagger:.04});}});
+    } else render();
+    $("#p-cta").onclick=()=>{setChip(d.motivo,true);};
+  }
+  organs.forEach(o=>{
+    o.addEventListener("click",()=>select(o.dataset.organ,true));
+    o.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();select(o.dataset.organ,true);}});
+  });
+  tabs.forEach((t,i)=>{
+    t.addEventListener("click",()=>select(t.dataset.organ,true));
+    t.addEventListener("keydown",e=>{
+      if(e.key!=="ArrowRight"&&e.key!=="ArrowLeft")return;
+      const n=tabs[(i+(e.key==="ArrowRight"?1:tabs.length-1))%tabs.length];n.focus();n.click();
+    });
+  });
+  select("rins",false);
+
+  /* ---------- mitos ---------- */
+  document.querySelectorAll(".myth").forEach(b=>b.addEventListener("click",()=>{
+    const open=b.getAttribute("aria-expanded")==="true";
+    b.setAttribute("aria-expanded",!open);
+    b.querySelector(".tag").textContent = open ? "Mito" : "Mito · resposta";
+    b.querySelector(".reveal").childNodes[0].nodeValue = open ? "Ver resposta" : "Fechar";
+  }));
+
+  /* ---------- composer WhatsApp ---------- */
+  const MOTIVOS=["Consulta de rotina","Próstata","Cálculo renal / rins","Bexiga / incontinência","Saúde sexual / pênis","Testículos / fertilidade","Fimose","Vasectomia ou outra cirurgia","Segunda opinião"];
+  const chips=$("#chips");
+  MOTIVOS.forEach((m,i)=>{
+    const l=document.createElement("label");l.className="chip";
+    l.innerHTML=`<input type="checkbox" id="motivo-${i}" value="${m}"><span>${m}</span>`;
+    chips.appendChild(l);
+  });
+  function setChip(value,on){
+    chips.querySelectorAll("input").forEach(i=>{if(i.value===value)i.checked=on;});
+    update();
+  }
+  function update(){
+    const nome=$("#nome").value.trim();
+    const sel=[...chips.querySelectorAll("input:checked")].map(i=>i.value);
+    const tipo=document.querySelector('input[name="tipo"]:checked').value;
+    let msg=`Olá! ${nome?`Meu nome é ${nome}. `:""}Gostaria de agendar uma consulta com o Dr. Cid Scarpa`;
+    msg+= sel.length ? `.\nMotivo: ${sel.join(", ")}.` : ".";
+    msg+= `\nAtendimento: ${tipo}.`;
+    if(tipo==="convênio") msg+=" Poderiam confirmar se meu plano é aceito?";
+    msg+="\nQuais horários estão disponíveis?";
+    const now=new Date();
+    $("#bubble").innerHTML="";
+    $("#bubble").append(document.createTextNode(msg));
+    const tm=document.createElement("time");tm.textContent=now.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"})+" ✓✓";
+    $("#bubble").append(tm);
+    $("#send").href=`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+  }
+  $("#composer").addEventListener("input",update);
+  $("#composer").addEventListener("change",update);
+  update();
+
+  /* ---------- canvas: feixe de laser ---------- */
+  const cv=$("#laser"), ctx=cv.getContext("2d");
+  let W,H,t=0,parts=[];
+  function size(){const r=cv.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+    parts=Array.from({length:70},()=>({a:Math.random()*Math.PI*2,r:40+Math.random()*Math.min(W,H)*.42,s:(.002+Math.random()*.004)*(Math.random()<.5?-1:1),z:Math.random()}));}
+  function frame(){
+    ctx.clearRect(0,0,W,H);
+    const cx=W/2, cy=H*.46, R=Math.min(W,H)*.2;
+    // anéis
+    for(let i=0;i<4;i++){ctx.beginPath();ctx.arc(cx,cy,R+i*26,0,Math.PI*2);ctx.strokeStyle=`rgba(141,184,242,${.18-i*.035})`;ctx.lineWidth=1;ctx.stroke();}
+    // glândula
+    const g=ctx.createRadialGradient(cx,cy,4,cx,cy,R);g.addColorStop(0,"rgba(141,184,242,.55)");g.addColorStop(1,"rgba(31,111,224,.08)");
+    ctx.beginPath();ctx.ellipse(cx,cy,R*1.05,R*.78,0,0,Math.PI*2);ctx.fillStyle=g;ctx.fill();
+    // feixe varrendo
+    const ang=Math.sin(t*.9)*.9 - Math.PI/2;
+    const tipX=cx+Math.cos(ang)*R*.7, tipY=cy+Math.sin(ang)*R*.55;
+    const lg=ctx.createLinearGradient(cx,H,tipX,tipY);lg.addColorStop(0,"rgba(255,255,255,0)");lg.addColorStop(1,"rgba(255,255,255,.95)");
+    ctx.beginPath();ctx.moveTo(cx,H);ctx.lineTo(tipX,tipY);ctx.strokeStyle=lg;ctx.lineWidth=2;ctx.shadowColor="#8DB8F2";ctx.shadowBlur=18;ctx.stroke();ctx.shadowBlur=0;
+    ctx.beginPath();ctx.arc(tipX,tipY,4+Math.sin(t*8)*1.2,0,Math.PI*2);ctx.fillStyle="#fff";ctx.fill();
+    // partículas
+    parts.forEach(p=>{p.a+=p.s;const x=cx+Math.cos(p.a)*p.r,y=cy+Math.sin(p.a)*p.r*.7;ctx.beginPath();ctx.arc(x,y,.6+p.z*1.4,0,Math.PI*2);ctx.fillStyle=`rgba(190,214,245,${.25+p.z*.5})`;ctx.fill();});
+    t+=.016;
+    if(!reduce) requestAnimationFrame(frame);
+  }
+  size();frame();addEventListener("resize",()=>{size();if(reduce)frame();});
+
+  /* ---------- ícones ---------- */
+  if(window.lucide) lucide.createIcons({attrs:{"stroke-width":1.75}});
+
+  /* ---------- entrada ---------- */
+  if(window.gsap && !reduce){
+    gsap.from(".reveal-up",{y:24,opacity:0,duration:.8,ease:"power3.out",stagger:.08});
+    gsap.from(".reveal-photo .portrait-frame",{clipPath:"inset(100% 0 0 0 round 220px 220px 20px 20px)",duration:1.1,ease:"power3.inOut"});
+    gsap.from(".credential",{x:-20,opacity:0,duration:.7,delay:.7,ease:"power2.out"});
+    document.querySelectorAll(".draw").forEach(el=>{
+      const len=el.getTotalLength?el.getTotalLength():300;
+      gsap.fromTo(el,{strokeDasharray:len,strokeDashoffset:len},{strokeDashoffset:0,duration:1.6,delay:.3,ease:"power2.inOut",clearProps:"strokeDasharray,strokeDashoffset"});
+    });
+  }
+})();
+</script>
+</body>
+</html>
